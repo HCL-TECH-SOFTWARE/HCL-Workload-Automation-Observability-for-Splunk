@@ -2,21 +2,24 @@
 You can use the HCL Workload Automation (HWA) Observability for Splunk to monitor HCL Workload Automation metrics, events, audit and infrastructure logs.
 
 ## Content
-  - [Prerequisites](#prerequisites)
-  - [Language support](#language-support)
-  - [Installation](#installation)
-      - [1. Splunk installation](#1-splunk-installation)
-          - [a). Create required index in Splunk](#a-create-required-index-in-splunk)
-          - [b). Create HEC Token](#b-create-HEC-Token)
-      - [2. Splunk Connect for Kubernetes](#2-splunk-connect-for-kubernetes)
-          - [a). Configuration for GKE cluster](#a-configuration-for-gke-cluster)
-          - [b). Configuration for Openshift cluster](#b-configuration-for-openshift-cluster)
-  - [HWA Monitoring App Setup in Splunk](#hwa-monitoring-app-setup-in-splunk)
-      - [1. Install or Import HWA Monitoring App in Splunk](#1-install-or-import-hwa-monitoring-app-in-splunk)
-      - [2. Configure HWA Monitoring App](#2-configure-hwa-monitoring-app)
-      - [3. Setting the Exporter for reading data from HWA Metrics API ](#3-setting-the-exporter-for-reading-data-from-hwa-metrics-api)
-  - [Getting Started with HCL Workload Automation Monitoring App](#getting-started-with-hcl-workload-automation-monitoring-app)
-  - [FAQs](#faqs)
+- [HCL Workload Automation Observability for Splunk](#hcl-workload-automation-observability-for-splunk)
+  - [Content](#content)
+- [Prerequisites](#prerequisites)
+- [Language support](#language-support)
+- [Installation](#installation)
+    - [1. Installing and Configuring splunk](#1-installating-and-configuring-splunk) 
+    - [2. Splunk installation](#2-splunk-installation)
+      - [a. Create required index in Splunk](#a-create-required-index-in-splunk)
+      - [b. Create HEC Token](#b-create-hec-token)
+    - [3. Splunk Connect for Kubernetes](#3-splunk-connect-for-kubernetes)
+      - [a. Configuration for GKE cluster](#a-configuration-for-gke-cluster)
+      - [b. Configuration for Openshift cluster](#b-configuration-for-openshift-cluster)
+- [HWA Monitoring App Setup in Splunk](#hwa-monitoring-app-setup-in-splunk)
+    - [1. Install or Import HWA Monitoring App in Splunk](#1-install-or-import-hwa-monitoring-app-in-splunk)
+    - [2. Configure HWA Monitoring App](#2-configure-hwa-monitoring-app)
+    - [3. Setting the Exporter for reading data from HWA Metrics API](#3-setting-the-exporter-for-reading-data-from-hwa-metrics-api)
+- [Getting Started with HCL Workload Automation Monitoring App](#getting-started-with-hcl-workload-automation-monitoring-app)
+- [FAQs](#faqs)
 
 # Prerequisites
 Following prerequisites must be satisfied prior to deploy Splunk Solution: 
@@ -29,9 +32,24 @@ Following prerequisites must be satisfied prior to deploy Splunk Solution:
 # Language support
 For dashboards provided within HWA Observability for Splunk, the only supported language is English.   
   
+
+
 # Installation
 
-### 1. Splunk installation
+### 1. Installating and configuring splunk
+1. From [HCL License Portal](https://id.hcltechsw.com/login/login.htm) download the appropriate HWA Observability installation package:
+   HWA Observability for HWA Observability Add-on
+2. Installation package for Splunk: HWA_OBSERVABILITY_FOR_SPLUNK_10.1.0.1.tar.gz
+3. Follow the below command to untar the gzip file 
+  
+  ```
+
+	tar -xvzf HWA_OBSERVABILITY_FOR_SPLUNK_10.1.0.1.tar.gz
+  ```
+
+4. Follow the steps mentioned on the ReadMe file to continue solution setup.
+
+### 2. Splunk installation
 Splunk can be deployed on Kubernetes by using official [Splunk Operator for Kubernetes](https://github.com/splunk/splunk-operator/blob/master/docs/README.md). Follow the steps mentioned in Splunk official documentation to setup Splunk by using Splunk Operator.
 
 #### a. Create required index in Splunk 
@@ -47,7 +65,7 @@ Splunk can be deployed on Kubernetes by using official [Splunk Operator for Kube
   >- Among the allowed indexes, select "hwa-logs".
   >- Save it.
 
-### 2. Splunk Connect for Kubernetes
+### 3. Splunk Connect for Kubernetes
 Follow below given steps and install Splunk Connect for Kubernetes on your Kubernetes cluster. 
 #### a. Configuration for GKE cluster
 Steps to follow:
