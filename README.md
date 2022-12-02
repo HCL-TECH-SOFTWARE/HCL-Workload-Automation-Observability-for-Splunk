@@ -39,12 +39,12 @@ For dashboards provided within HWA Observability for Splunk, the only supported 
 ### 1. Installating and configuring splunk
 1. From [HCL License Portal](https://id.hcltechsw.com/login/login.htm) download the appropriate HWA Observability installation package:
    HWA Observability for HWA Observability Add-on
-2. Installation package for Splunk: HWA_OBSERVABILITY_FOR_SPLUNK_10.1.0.1.tar.gz
+2. Installation package for Splunk: HWA_OBSERVABILITY_APP_FOR_SPLUNK_10.1.0.1.tar.gz
 3. Follow the below command to untar the gzip file 
   
   ```
 
-	tar -xvzf HWA_OBSERVABILITY_FOR_SPLUNK_10.1.0.1.tar.gz
+	tar -xvzf HWA_OBSERVABILITY_APP_FOR_SPLUNK_10.1.0.1.tar.gz
   ```
 
 4. Follow the steps mentioned on the ReadMe file to continue solution setup.
