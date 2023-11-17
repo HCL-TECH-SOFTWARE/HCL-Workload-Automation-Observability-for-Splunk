@@ -1,1 +1,0 @@
-# Fluent splunk log forwarder
